@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.time.LocalDate;
+
+ public class Day {
+    public static String getDay(String Day, String Month, String Year){
+        int d = Integer.parseInt(Day);
+        int m = Integer.parseInt(Month);
+        int y = Integer.parseInt(Year);
+        
+        LocalDate lt =  LocalDate.of(y,m,d);
+        return lt.getDayOfWeek().name();
+        
+    } 
+
+ 
+  public static void main(String args[]){
+    Scanner sc = new Scanner(System.in);
+    
+    String Month = sc.next();
+    String Day = sc.next();
+    String Year = sc.next();
+    
+    System.out.println(getDay(Day,Month,Year));
+}
+
+ }
